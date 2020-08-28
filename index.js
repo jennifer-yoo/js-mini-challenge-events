@@ -40,7 +40,36 @@ function toggleColor(element) {
   }
 }
 
+let head = document.getElementById('header')
+head.addEventListener("click", function(e) {
+  toggleColor(head);
+})
 
 /***** Deliverable 2 *****/
+let playerForm = document.getElementById('new-player-form')
+  playerForm.addEventListener('submit', function(e) {
+    event.preventDefault();
+      let newPlayer = {
+        number: playerForm.number.value,
+        name: playerForm.name.value,
+        nickname: playerForm.nickname.value,
+        photo: playerForm.photo.value,
+        likes: 0,
+      }
+    renderPlayer(newPlayer);
+  }
+)
 
 /***** Deliverable 3 *****/
+
+
+document.addEventListener('click', function(e) {
+  if (e.target.innerText === "❤️") {
+    const numLike = e.target.parentElement.querySelector('p').textContent.split(" ")[0] // get the likes from the p tag and gives string number
+    let newLike = parseInt(numLike, 10) + 1 // turns string into number
+    let idPlayer = e.target.parentElement.querySelector('p')  // finds player that was liked 
+    idPlayer.innerHTML = `${newLike} likes` // updates like for player that was liked
+  }
+})
+
+

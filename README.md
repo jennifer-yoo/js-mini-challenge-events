@@ -42,9 +42,7 @@ Some things to keep in mind:
 - Once you have access to an input field, you still need to retrieve its *value* to see what the user entered in the form!
 
 **YOUR NOTES**
-```
-
-```
+have the new player equal to a variable. then pass it into the helper method
 
 ## Deliverable 3: Like Button
 
